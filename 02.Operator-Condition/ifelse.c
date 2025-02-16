@@ -1,33 +1,16 @@
-// Arithmetic Operator
-// + - * / %
-
 #include <stdio.h>
 
 int main()
 {
-    int a = 30, b = 11;
+    int tk;
+    scanf("%d", &tk);
 
-    // +
-    int addition = a + b;
-
-    // -
-    int minus = a - b;
-
-    // *
-    int multiply = a * b;
-
-    // /
-    int division = a / b;
-    float division02 = a * 1.0 / b;
-
-    // %
-    int module = a % b;
-
-    printf("%d", module);
+    if (tk >= 100)
+    {
+        printf("Burger Khabo");
+    }
+    else
+    {
+        printf("Sharadin r kichu kabo na.");
+    }
 }
-
-// Relational Operator
-//  > >= == <= <
-
-// Conditional Operator
-// && ||
