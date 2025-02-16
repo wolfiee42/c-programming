@@ -1,3 +1,4 @@
+// Arithmetic Operator
 // + - * / %
 
 #include <stdio.h>
@@ -24,3 +25,9 @@ int main()
 
     printf("%d", module);
 }
+
+// Relational Operator
+//  > >= == <= <
+
+// Conditional Operator
+// && ||
