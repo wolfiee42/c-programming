@@ -2,7 +2,7 @@
 
 int main()
 {
-    int biggeatNum = 0;
+    int biggeatNum;
     int i;
 
     int N;
