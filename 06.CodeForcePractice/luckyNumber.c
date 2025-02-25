@@ -8,12 +8,19 @@ int main()
     int firstNum = a / 10;
     int secondNum = a % 10;
 
-    if (firstNum % secondNum == 0 || secondNum % firstNum == 0)
+    if (secondNum != 0)
     {
-        printf("YES");
+        if ((firstNum % secondNum == 0 || secondNum % firstNum == 0))
+        {
+            printf("YES");
+        }
+        else
+        {
+            printf("NO");
+        }
     }
     else
     {
-        printf("NO");
+        printf("YES");
     }
 }
