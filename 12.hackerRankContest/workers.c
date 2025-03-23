@@ -6,10 +6,8 @@ int main()
 
     scanf("%d %d %d", &M1, &M2, &D);
 
-    float n = M1 / M2;
-
-    float D2 = D * n;
+    int n = (D * M1) / M2;
 
     // printf("%0.f\n", n);
-    printf("%0.f\n", D2);
+    printf("%d\n", n);
 }
