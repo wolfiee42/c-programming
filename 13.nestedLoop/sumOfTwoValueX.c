@@ -3,7 +3,10 @@
 
 int main()
 {
-    int arr[5];
+
+    int n;
+    scanf("%d", &n);
+    int arr[n];
 
     for (int i = 0; i < 5; i++)
     {
@@ -11,32 +14,46 @@ int main()
         // printf("%d", arr[i]);
     }
 
+    int x;
+    scanf("%d", &x);
+
+    int flag = 0;
+
     // solution 01
-    // for (int i = 0; i < 5; i++)
+    // for (int i = 0; i < n - 1; i++)
     // {
-    //     for (int j = 1; j < 5; j++)
+    //     for (int j = i + 1; j < n; j++)
     //     {
-    //         if (arr[i] + arr[j] == 8)
+    //         if (arr[i] + arr[j] == x)
     //         {
-    //             printf("ind %d ind %d", i, j);
-    //             break;
+    //             flag = 1;
     //         }
     //     }
     // }
 
     // solution 02
-    int x = 0, y = 1;
-    while (x < 7)
+    int i = 0, j = 0;
+    while (i < n + 1)
     {
-        while (y < 7)
+        j = i + 1;
+        while (j < n)
         {
-            if (arr[x] + arr[y] == 8)
+            if (arr[i] + arr[j] == x)
             {
-                printf("ind %d ind %d", x, y);
+                flag = 1;
                 break;
             }
-            y++;
+            j++;
         }
-        x++;
+        i++;
+    }
+
+    if (flag == 0)
+    {
+        printf("NO\n");
+    }
+    else
+    {
+        printf("YES\n");
     }
 }
