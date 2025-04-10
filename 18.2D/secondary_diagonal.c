@@ -24,7 +24,7 @@ int main()
     {
         for (int j = 0; j < col; j++)
         {
-            if (i == j)
+            if (i + j == row - 1)
                 continue;
             ;
             if (arr[i][j] != 0)
@@ -36,10 +36,10 @@ int main()
 
     if (flag == 1)
     {
-        printf("Primary Diagonal\n");
+        printf("Secondary Diagonal\n");
     }
     else
     {
-        printf("NO Primary Diagonal\n");
+        printf("NO Secondary Diagonal\n");
     }
 }
