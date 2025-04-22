@@ -1,39 +1,28 @@
 #include <stdio.h>
 
-void printDigit(int number)
+void printDigit(int n)
 {
-    if (number < 0)
+    if (n == 0)
         return;
-    int prevNum = number % 10;
-    number = number / 10;
-    printDigit(number);
-    printf("%d ", prevNum);
+    int x = n % 10;
+    printDigit(n / 10);
+    printf("%d ", x);
 }
 
 int main()
 {
-    int n;
-    scanf("%d", &n);
-
-    int number;
-    for (int i = 0; i < n; i++)
+    int len;
+    scanf("%d", &len);
+    for (int i = 0; i < len; i++)
     {
-        scanf("%d", &number);
-
-        // int num = number;
-        // while (1)
-        // {
-        //     int prevNum = num % 10;
-        //     num = num / 10;
-        //     printf("%d ", prevNum);
-        //     if (num < 1)
-        //     {
-        //         printf("\n");
-        //         break;
-        //     }
-        // }
-        printDigit(number);
+        int n;
+        scanf("%d", &n);
+        printDigit(n);
+        if (n == 0)
+        {
+            printf("0");
+        }
+        printf("\n");
     }
-
     return 0;
 }
