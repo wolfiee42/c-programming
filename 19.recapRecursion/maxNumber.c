@@ -7,7 +7,7 @@ int getMaxNumber(int *arr, int maxNumber, int index, int length)
     if (index == 0)
         maxNumber = arr[index];
     if (arr[index] > maxNumber)
-        return maxNumber = arr[index];
+        maxNumber = arr[index];
     return getMaxNumber(arr, maxNumber, index + 1, length);
 }
 
