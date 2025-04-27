@@ -1,24 +1,31 @@
-#include <stdio.h>
+ int length = strlen(word);
 
-void printDigit(int n)
-{
-    if (n == 0)
-        return;
-    int x = n % 10;
-    printDigit(n / 10);
-    printf("%d ", x);
-}
+    int flag = 0;
+    int index = 0;
+    int lasNum = length - 1;
 
-int main()
-{
-    int len;
-    scanf("%d", &len);
-    for (int i = 0; i < len; i++)
+    while (1)
     {
-        int n;
-        scanf("%d", &n);
-        printDigit(n);
+        if (index == length / 2)
+        {
+            break;
+        }
+        if (word[index] == word[lasNum])
+        {
+            continue;
+        }
+        else
+        {
+            printf("%d - %d\n", index, lasNum);
+            printf("%d - %d\n", word[index], word[lasNum]);
+            flag = 1;
+            break;
+        }
+
+        printf("index: %d ", index);
+        printf("lasNum: %d ", lasNum);
         printf("\n");
+        index++;
+        lasNum--;
     }
-    return 0;
-}
+    printf("%d", flag);
